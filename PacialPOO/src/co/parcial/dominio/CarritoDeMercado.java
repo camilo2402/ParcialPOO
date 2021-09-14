@@ -1,6 +1,7 @@
 package co.parcial.dominio;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class CarritoDeMercado {
@@ -58,15 +59,8 @@ public class CarritoDeMercado {
         return valorTotal;
     }
     public Producto obtenerProductoMasCaro(){
-        int precioMaximo = 0;
-        Producto masCaro = null;
-        for (Producto producto : this.productos) {
-            if(producto.getPrecio()>precioMaximo){
-                precioMaximo = producto.getPrecio();
-                masCaro = producto;
-            }
-        }
-        return masCaro;
+        Collections.sort(productos);
+        return productos.get(0);
     }
 
     public String getSupermercado() {

@@ -9,19 +9,12 @@ public class App {
         Producto leche = new Producto("leche",2000,"lacteos");
         Producto arroz = new Producto("arroz", 1500,"cereal");
         Producto detergente = new Producto("jabón", 3000,"limpieza");
+        Producto cereal = new Producto("Zucaritas",15000,"cereal");
+        Producto libro = new Producto("libro", 85000,"libro");
+        camilo.agregar(libro);
+        camilo.agregar(cereal);
         camilo.agregar(leche);
         camilo.agregar(arroz);
         camilo.agregar(detergente);
-        for (Producto producto: camilo.getProductos()) {
-            System.out.println("-"+producto.getNombre()+"\n-"+producto.getPrecio()+"\n-"+producto.getTipo()+"\n");
-            System.out.println("\n");
-        }
-        for (Producto producto: camilo.buscarPorTipo("cereal")) {
-            System.out.println("-"+producto.getNombre()+"\n-"+producto.getPrecio()+"\n-"+producto.getTipo()+"\n");
-            System.out.println("\n");
-        }
-        System.out.println(camilo.caldularValorTotal());
-        camilo.obtenerProductoMasCaro();
-        camilo.sacar("leche");
     }
 }

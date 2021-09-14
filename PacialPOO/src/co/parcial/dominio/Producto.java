@@ -1,6 +1,6 @@
 package co.parcial.dominio;
 
-public class Producto{
+public class Producto implements Comparable<Producto>{
     private String nombre;
     private int precio;
     private String tipo;
@@ -21,5 +21,20 @@ public class Producto{
 
     public String getTipo() {
         return tipo;
+    }
+
+    @Override
+    public int compareTo(Producto o) {
+        if(this.precio < o.getPrecio()){
+            return 1;
+        }
+        else{
+            if(this.precio == o.getPrecio()){
+                return 0;
+            }
+            else{
+                return -1;
+            }
+        }
     }
 }
