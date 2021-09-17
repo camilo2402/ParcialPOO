@@ -5,7 +5,7 @@ import co.parcial.dominio.Producto;
 
 public class App {
     public static void main(String[] args) {
-        CarritoDeMercado camilo = new CarritoDeMercado();
+        CarritoDeMercado camilo = new CarritoDeMercado("olimpica");
         Producto leche = new Producto("leche",2000,"lacteos");
         Producto arroz = new Producto("arroz", 1500,"cereal");
         Producto detergente = new Producto("jabón", 3000,"limpieza");

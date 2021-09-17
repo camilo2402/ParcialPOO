@@ -7,7 +7,12 @@ import java.util.List;
 public class CarritoDeMercado {
     public static final byte CAPACIDAD = 20;
     private String supermercado;
-    private List<Producto> productos = new ArrayList<>();
+    private List<Producto> productos;
+
+    public CarritoDeMercado(String supermercado) {
+        this.supermercado = supermercado;
+        List<Producto> producto = new ArrayList<>();
+    }
 
     public boolean agregar(Producto p){
         if(p != null){
